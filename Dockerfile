@@ -14,10 +14,11 @@ RUN apt-get update -q
 # General packages
 RUN apt-get install -qy \
     apt-utils \
-    locales \
     curl \
     git \
-    gh
+    gh \
+    locales \
+    wget
 
 # Set locale
 RUN locale-gen en_US.UTF-8 && update-locale
