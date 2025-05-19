@@ -14,10 +14,14 @@ RUN apt-get update -q
 # General packages
 RUN apt-get install -qy \
     apt-utils \
+    build-essential \
     curl \
-    git \
     gh \
+    git \
+    gnupg2 \
+    unzip \
     locales \
+    python3 \
     wget
 
 # Set locale
