@@ -17,15 +17,20 @@ RUN apt-get install -qy \
     build-essential \
     curl \
     gh \
-    git \
     gnupg2 \
     unzip \
     locales \
     python3 \
+    software-properties-common \
     wget
 
 # Set locale
 RUN locale-gen en_US.UTF-8 && update-locale
+
+# Install Git
+RUN add-apt-repository -y ppa:git-core/ppa \
+    && apt-get update -q \
+    && apt-get install -qy git
 
 # Install NodeJS
 ENV NODEJS_HOME=/opt/nodejs
