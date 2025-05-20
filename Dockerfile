@@ -30,7 +30,8 @@ RUN locale-gen en_US.UTF-8 && update-locale
 # Install Git
 RUN add-apt-repository -y ppa:git-core/ppa \
     && apt-get update -q \
-    && apt-get install -qy git
+    && apt-get install -qy git \
+    && git config --global --add safe.directory "*"
 
 # Install NodeJS
 ENV NODEJS_HOME=/opt/nodejs
