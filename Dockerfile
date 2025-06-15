@@ -22,6 +22,7 @@ RUN apt-get install -qy \
     locales \
     python3 \
     software-properties-common \
+    sudo \
     wget
 
 # Set locale

@@ -14,6 +14,12 @@ docker pull ghcr.io/robingenz/docker-github-actions-runner:latest
 
 ### Build image
 
+Build locally:  
+
+```
+docker build -t robingenz/github-actions-runner .
+```
+
 Build from GitHub:  
 
 ```
